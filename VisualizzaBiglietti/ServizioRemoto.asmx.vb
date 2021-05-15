@@ -1,61 +1,28 @@
-﻿Imports MySql.Data.MySqlClient
+﻿Imports System.Web.Services
+Imports System.Web.Services.Protocols
+Imports System.ComponentModel
+Imports MySql.Data.MySqlClient
 
-Public Class _Default
-    Inherits Page
+' Per consentire la chiamata di questo servizio Web dallo script utilizzando ASP.NET AJAX, rimuovere il commento dalla riga seguente.
+' <System.Web.Script.Services.ScriptService()> _
+<System.Web.Services.WebService(Namespace:="https://biglietti.mailticket.it/")>
+<System.Web.Services.WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
+<ToolboxItem(False)> _
+Public Class ServizioRemoto
+    Inherits System.Web.Services.WebService
 
     Private Const IpServerCassaNw As String = "10.10.0.7"
     Private Const UserNameDBCassaNw As String = "cassa"
     Private Const PasswordDbCassaNw As String = "Andromed@76"
     Private Const DatabaseCassaNw As String = "cassanuova"
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
-        Dim NumTel As String = Request.Item("NumTel")
-        Dim IdMan As String = Request.Item("IdMan")
-
-        Dim ElencoTitoli As List(Of Biglietto) = RecuperaBiglietti(NumTel, IdMan)
-
-        Dim NumBigl As Integer = 1
-
-        If Not IsNothing(ElencoTitoli) Then
-
-            For Each Bigl As Biglietto In ElencoTitoli
-                Dim Biglietto As String = My.Settings.Biglieto
-                Biglietto = Biglietto.Replace("@@NUMBIGLIETTO@@", "BIGLIETTO " + NumBigl.ToString)
-                Biglietto = Biglietto.Replace("@@QRID@@", "QR" + NumBigl.ToString)
-                Biglietto = Biglietto.Replace("@@QRCODE@@", Bigl.QRCode)
-                Biglietto = Biglietto.Replace("@@EVENTO@@", Bigl.NomeEvento)
-                Biglietto = Biglietto.Replace("@@DATA@@", Bigl.DataEvento)
-                Biglietto = Biglietto.Replace("@@DOVE@@", Bigl.filaeposto)
-                Biglietto = Biglietto.Replace("@@PREZZO@@", Bigl.Prezzo)
-                Biglietto = Biglietto.Replace("@@PREVENDITA@@", Bigl.Prevendita)
-                Biglietto = Biglietto.Replace("@@TOTALE@@", Bigl.Totale)
-                Biglietto = Biglietto.Replace("@@SCN@@", Bigl.SCN)
-                Biglietto = Biglietto.Replace("@@SCP@@", Bigl.SCP)
-                Biglietto = Biglietto.Replace("@@SCMAC@@", Bigl.SCMAC)
-                Biglietto = Biglietto.Replace("@@TITOLARE@@", Bigl.Titolare)
-                Biglietto = Biglietto.Replace("@@ORGANIZZATORE@@", Bigl.Organizzatore)
-                Biglietto = Biglietto.Replace("@@DATAE@@", Bigl.DataEmissione)
-                Biglietto = Biglietto.Replace("@@FISC@@", Bigl.Sistema)
-                Biglietto = Biglietto.Replace("@@TIPO@@", Bigl.TipoTitolo)
-                Biglietto = Biglietto.Replace("@@DESC@@", Bigl.DescTitolo)
-
-                ElencoBiglietti.Text += Biglietto
-                NumBigl += 1
-
-            Next
-        End If
-
-
-    End Sub
-
-
+    <WebMethod()>
     Public Function RecuperaBiglietti(NumTel As String, IdMan As String) As List(Of Biglietto)
         Dim Mysql As MySqlConnection
         Mysql =
            New MySqlConnection(
                 "server=" + IpServerCassaNw + ";user id=" + UserNameDBCassaNw + ";Password=" + PasswordDbCassaNw +
                 ";database=" + DatabaseCassaNw + ";persist security info=False")
-
 
         Try
             Mysql.Open()
@@ -202,4 +169,47 @@ Public Class _Default
             Mysql.Close()
         End Try
     End Function
+
+    <WebMethod>
+    Public Function InserisciAnagrafica(Nome As String, Cognome As String, CodiceBiglietto As String) As Boolean
+        Dim Mysql As MySqlConnection
+        Mysql =
+           New MySqlConnection(
+                "server=" + IpServerCassaNw + ";user id=" + UserNameDBCassaNw + ";Password=" + PasswordDbCassaNw +
+                ";database=" + DatabaseCassaNw + ";persist security info=False")
+
+        Try
+            Mysql.Open()
+
+            Using msqlCommand = New MySqlCommand() With {.Connection = Mysql}
+
+                msqlCommand.CommandText =
+                    "UPDATE emissionidigitali SET nome=@Nome, cognome=@Cognome  WHERE  codice_biglietto=@CodTit"
+                msqlCommand.Prepare()
+
+                msqlCommand.Parameters.AddWithValue("@CodTit", CodiceBiglietto)
+                msqlCommand.Parameters.AddWithValue("@Nome", Nome)
+                msqlCommand.Parameters.AddWithValue("@Cognome", Cognome)
+
+                Dim Righe As Integer = msqlCommand.ExecuteNonQuery
+
+                If Righe > 0 Then
+                    Return True
+                Else
+                    Return False
+                End If
+
+            End Using
+
+        Catch e As Exception
+            Return False
+        Finally
+            Mysql.Close()
+        End Try
+
+
+
+
+    End Function
+
 End Class
