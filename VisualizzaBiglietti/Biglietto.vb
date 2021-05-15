@@ -18,6 +18,7 @@
     Public Sistema As String
     Public TipoTitolo As String
     Public DescTitolo As String
+    Public Modificato As Boolean
 
 
 End Class

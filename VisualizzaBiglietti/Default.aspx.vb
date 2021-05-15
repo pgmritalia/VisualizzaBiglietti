@@ -188,6 +188,7 @@ Public Class _Default
                         Bigl.DescTitolo = "ND"
                     End If
 
+
                     ElencoBiglietti.Add(Bigl)
                 End While
 

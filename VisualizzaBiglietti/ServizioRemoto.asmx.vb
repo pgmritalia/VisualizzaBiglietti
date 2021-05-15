@@ -154,6 +154,11 @@ Public Class ServizioRemoto
                         Bigl.DescTitolo = "ND"
                     End If
 
+                    If reader.GetInt32("modificato") = 0 Then
+                        Bigl.Modificato = False
+                    Else
+                        Bigl.Modificato = True
+                    End If
                     ElencoBiglietti.Add(Bigl)
                 End While
 
