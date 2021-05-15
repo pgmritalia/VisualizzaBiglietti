@@ -184,7 +184,7 @@ Public Class ServizioRemoto
             Using msqlCommand = New MySqlCommand() With {.Connection = Mysql}
 
                 msqlCommand.CommandText =
-                    "UPDATE emissionidigitali SET nome=@Nome, cognome=@Cognome  WHERE  codice_biglietto=@CodTit"
+                    "UPDATE emissionidigitali SET nome=@Nome, cognome=@Cognome, modificato=1  WHERE  codice_biglietto=@CodTit"
                 msqlCommand.Prepare()
 
                 msqlCommand.Parameters.AddWithValue("@CodTit", CodiceBiglietto)
