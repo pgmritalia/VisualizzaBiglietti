@@ -3,10 +3,7 @@
 Public Class _Default
     Inherits Page
 
-    Private Const IpServerCassaNw As String = "10.10.0.7"
-    Private Const UserNameDBCassaNw As String = "cassa"
-    Private Const PasswordDbCassaNw As String = "Andromed@76"
-    Private Const DatabaseCassaNw As String = "cassanuova"
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
         Dim NumTel As String = Request.Item("NumTel")
