@@ -1,0 +1,12 @@
+﻿<div id="chart"></div>
+<script src="https://cdn.seatsio.net/chart.js"></script>
+<script>
+    new seatsio.SeatingChart({
+        divId: 'chart',
+        workspaceKey: '63ece817-2e0f-4121-953e-5ecd6934e84f',
+        event: '28311',
+        onObjectSelected: function(object){
+        Selezione(object);
+    }
+    }).render();
+</script>

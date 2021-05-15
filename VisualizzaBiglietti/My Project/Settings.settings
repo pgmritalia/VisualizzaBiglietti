@@ -1,0 +1,103 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Biglieto" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">&lt;div&gt;
+            &lt;p style="text-align:center"&gt;
+              @@NUMBIGLIETTO@@
+            &lt;/p&gt;
+            &lt;div style="align-items:center" id="@@QRID@@"&gt;&lt;/div&gt;
+                &lt;script type="text/javascript"&gt;
+                new QRCode(document.getElementById("@@QRID@@"), "@@QRCODE@@");
+                &lt;/script&gt;
+            &lt;br /&gt;
+            &lt;p&gt; 
+              
+                &lt;table style="width: 100%;"&gt;
+ &lt;tr&gt;
+                        &lt;td&gt;Tit &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@TITOLARE@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Org &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@ORGANIZZATORE@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                  &lt;tr&gt;
+                        &lt;td&gt;Evento &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@EVENTO@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Data &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@DATA@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Fila e Posto&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@DOVE@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt; Tipo &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@TIPO@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                      &lt;tr&gt;
+                        &lt;td&gt; Descrizione &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@DESC@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+
+
+                    &lt;tr&gt;
+                        &lt;td&gt; Prezzo &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@PREZZO@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;Prevendita &lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@PREVENDITA@@&lt;/b&gt;&lt;/td&gt;
+                       
+                    &lt;/tr&gt;
+                     &lt;tr&gt;
+                        &lt;td&gt;Totale&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@TOTALE@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;SCN&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@SCN@@&lt;/b&gt;&lt;/td&gt;
+                        
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;SCP&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@SCP@@&lt;/b&gt;&lt;/td&gt;
+                       
+                    &lt;/tr&gt;
+                     &lt;tr&gt;
+                        &lt;td&gt;SCMAC&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@SCMAC@@&lt;/b&gt;&lt;/td&gt;
+                       
+                    &lt;/tr&gt;
+ &lt;tr&gt;
+                        &lt;td&gt;Data e Ora emisione&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@DATAE@@&lt;/b&gt;&lt;/td&gt;
+                       
+                    &lt;/tr&gt;
+ &lt;tr&gt;
+                        &lt;td&gt;Sistema fiscale&lt;/td&gt;
+                        &lt;td&gt;&lt;b&gt;@@FISC@@&lt;/b&gt;&lt;/td&gt;
+                       
+                    &lt;/tr&gt;
+
+                &lt;/table&gt;
+            &lt;/p&gt;
+                
+            &lt;/div&gt;
+&lt;hr/&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
