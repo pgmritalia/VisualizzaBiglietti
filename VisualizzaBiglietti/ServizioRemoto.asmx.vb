@@ -12,8 +12,8 @@ Public Class ServizioRemoto
     Inherits System.Web.Services.WebService
 
     Private Const IpServerCassaNw As String = "10.10.0.7"
-    Private Const UserNameDBCassaNw As String = "cassa"
-    Private Const PasswordDbCassaNw As String = "Andromed@76"
+    Private Const UserNameDBCassaNw As String = "BigliettiSMS"
+    Private Const PasswordDbCassaNw As String = "B!gliett!SmS2021*"
     Private Const DatabaseCassaNw As String = "cassanuova"
 
     <WebMethod()>
