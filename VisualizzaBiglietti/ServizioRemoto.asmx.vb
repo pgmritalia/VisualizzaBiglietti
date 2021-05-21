@@ -4,7 +4,7 @@ Imports System.ComponentModel
 Imports MySql.Data.MySqlClient
 
 ' Per consentire la chiamata di questo servizio Web dallo script utilizzando ASP.NET AJAX, rimuovere il commento dalla riga seguente.
-' <System.Web.Script.Services.ScriptService()> _
+<System.Web.Script.Services.ScriptService()>
 <System.Web.Services.WebService(Namespace:="https://biglietti.mailticket.it/")>
 <System.Web.Services.WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
 <ToolboxItem(False)> _
