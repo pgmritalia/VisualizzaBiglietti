@@ -99,5 +99,8 @@
             &lt;/div&gt;
 &lt;hr/&gt;</Value>
     </Setting>
+    <Setting Name="VisualizzaBiglietti_wsTicket_ServizioRemoto" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://biglietti.mailticket.it/ServizioRemoto.asmx</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
