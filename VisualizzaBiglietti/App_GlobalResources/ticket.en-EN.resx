@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="cognome" xml:space="preserve">
-    <value>Cognome</value>
+    <value>Surname</value>
   </data>
   <data name="cognomeObbligatorio" xml:space="preserve">
-    <value>Inserire il cognome</value>
+    <value>Enter the surname</value>
   </data>
   <data name="compilacampi" xml:space="preserve">
-    <value>Per visualizzare i biglietti compila tutti i dati per ogni singolo biglietto</value>
+    <value>To view the tickets, fill in all the data for each individual ticket</value>
   </data>
   <data name="conferma" xml:space="preserve">
-    <value>Conferma</value>
+    <value>Confirm</value>
   </data>
   <data name="erroreAnagrafica" xml:space="preserve">
-    <value>Si è verificato un errore durante il salvataggio anagrafica</value>
+    <value>An error occurred while saving the registry</value>
   </data>
   <data name="loading" xml:space="preserve">
-    <value>Attendere prego....</value>
+    <value>Please wait....</value>
   </data>
   <data name="nome" xml:space="preserve">
-    <value>Nome</value>
+    <value>Name</value>
   </data>
   <data name="nomeObbligatorio" xml:space="preserve">
-    <value>Inserire il nome</value>
+    <value>Enter name</value>
   </data>
   <data name="numBiglietto" xml:space="preserve">
-    <value>Biglietto n°:</value>
+    <value>Ticket n °:</value>
   </data>
   <data name="prevendita" xml:space="preserve">
-    <value>Prevendita</value>
+    <value>Presale</value>
   </data>
   <data name="prezzo" xml:space="preserve">
-    <value>Prezzo</value>
+    <value>Price</value>
   </data>
   <data name="totale" xml:space="preserve">
-    <value>Totale</value>
+    <value>Total</value>
   </data>
 </root>

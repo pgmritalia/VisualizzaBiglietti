@@ -17,12 +17,6 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/Ticket.css" rel="stylesheet" />
     <link href="Content/toastr.css" rel="stylesheet" />
-    <style>
-        .card{
-            margin-top:5px !important;
-        }
-    </style>
-
 </head>
 <body data-ng-app="MyApp">
     <form runat="server">
@@ -46,24 +40,25 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="~/">
-                        <img alt="Digital Ticket" src="mailticket_logo.png" style="max-width: 100px; margin-top: -7px;" /></a>
-                </div>
-
+        <div class="wrapper">
+           
+            <nav id="topNav" class="navbar fixed-top navbar-toggleable-sm navbar-inverse bg-inverse">
+                <a class="navbar-brand" href="#" style="margin-left: 35%">
+                   <img alt="Digital Ticket" src="mailticket_logo.png" style="width: 400px; margin-top: -7px;" />
+                    
+                    <asp:ImageButton ID="flagIt" runat="server" ImageUrl="~/Content/flag/Italy-Flag.png" />
+                    <asp:ImageButton ID="flagUk" runat="server" ImageUrl="~/Content/flag/United-Kingdom-Flag.png" />
+                </a>
+            </nav>
+            <div class="content-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - Digital Ticket by Mailticket</p>
+                </footer>
             </div>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Digital Ticket by Mailticket</p>
-            </footer>
-        </div>
-
     </form>
 </body>
 </html>

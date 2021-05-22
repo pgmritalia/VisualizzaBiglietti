@@ -74,6 +74,24 @@ Namespace Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Inserire il cognome.
+        '''</summary>
+        Friend Shared ReadOnly Property cognomeObbligatorio() As String
+            Get
+                Return ResourceManager.GetString("cognomeObbligatorio", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Per visualizzare i biglietti compila tutti i dati per ogni singolo biglietto.
+        '''</summary>
+        Friend Shared ReadOnly Property compilacampi() As String
+            Get
+                Return ResourceManager.GetString("compilacampi", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Conferma.
         '''</summary>
         Friend Shared ReadOnly Property conferma() As String
@@ -106,6 +124,15 @@ Namespace Resources
         Friend Shared ReadOnly Property nome() As String
             Get
                 Return ResourceManager.GetString("nome", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Inserire il nome.
+        '''</summary>
+        Friend Shared ReadOnly Property nomeObbligatorio() As String
+            Get
+                Return ResourceManager.GetString("nomeObbligatorio", resourceCulture)
             End Get
         End Property
         

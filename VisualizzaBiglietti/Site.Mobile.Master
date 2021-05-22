@@ -7,7 +7,7 @@
 <head id="Head1" runat="server">
     <meta name="viewport" content="width=device-width" />
     <title>Digital Ticket</title>
-   
+
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -17,8 +17,8 @@
     <link href="Content/Ticket.css" rel="stylesheet" />
     <link href="Content/toastr.css" rel="stylesheet" />
     <style>
-        .card{
-            margin-top:5px !important;
+        .card {
+            margin-top: 5px !important;
         }
     </style>
 </head>
@@ -44,24 +44,26 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" runat="server" href="~/">
-                        <img alt="Digital Ticket" src="mailticket_logo.png" style="max-width: 100px; margin-top: -7px;" /></a>
-                </div>
-
+        <div class="wrapper">
+            <nav id="topNav" class="navbar fixed-top navbar-toggleable-sm navbar-inverse bg-inverse">
+                <a class="navbar-brand" href="#" style="margin-left: 20%">
+                    <img alt="Digital Ticket" src="mailticket_logo.png" style="width: 200px; margin-top: -7px;" />
+                
+                    <asp:ImageButton ID="flagMobileIt" runat="server" ImageUrl="~/Content/flag/Italy-Flag16.png" />
+                   
+                    <asp:ImageButton ID="flagMobileEn" runat="server" ImageUrl="~/Content/flag/United-Kingdom-Flag16.png" />
+                </a>
+            </nav>
+            <div class="content-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <hr />
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> - Digital Ticket by Mailticket</p>
+                </footer>
             </div>
         </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Digital Ticket by Mailticket</p>
-            </footer>
-        </div>
-
     </form>
-</body></html>
+</body>
+</html>
 

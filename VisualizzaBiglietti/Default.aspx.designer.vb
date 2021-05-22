@@ -41,38 +41,47 @@ Partial Public Class _Default
     Protected WithEvents paramLoading As Global.System.Web.UI.HtmlControls.HtmlInputHidden
 
     '''<summary>
-    '''Literal2 control.
+    '''litDisplay control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Literal2 As Global.System.Web.UI.WebControls.Literal
+    Protected WithEvents litDisplay As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
-    '''Literal3 control.
+    '''litBiglietto control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Literal3 As Global.System.Web.UI.WebControls.Literal
+    Protected WithEvents litBiglietto As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
-    '''Literal4 control.
+    '''litNome control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Literal4 As Global.System.Web.UI.WebControls.Literal
+    Protected WithEvents litNome As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
-    '''Literal1 control.
+    '''litCognome control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Literal1 As Global.System.Web.UI.WebControls.Literal
+    Protected WithEvents litCognome As Global.System.Web.UI.WebControls.Literal
+
+    '''<summary>
+    '''litConferma control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents litConferma As Global.System.Web.UI.WebControls.Literal
 End Class

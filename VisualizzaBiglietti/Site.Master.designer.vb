@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class SiteMaster
 
     '''<summary>
+    '''flagIt control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents flagIt As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''flagUk control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents flagUk As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
     '''MainContent control.
     '''</summary>
     '''<remarks>

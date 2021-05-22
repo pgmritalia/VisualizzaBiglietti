@@ -1,4 +1,6 @@
-﻿Public Class ItemTicketViewModel
+﻿Imports System.Globalization
+
+Public Class ItemTicketViewModel
     Public Property NumBiglietto As String
     Public Property QRCode As String
     Public Property NomeEvento As String
@@ -17,11 +19,17 @@
     Public Property TipoTitolo As String
     Public Property DescTitolo As String
     Public Property Modificato As Boolean
-
-    Public ReadOnly Property sezionePrezzo As String
+    Public ReadOnly Property CodBiglietto As String
         Get
 
-            Return String.Format("{3}: {0} - {4}: {1} - {5}: {2}", Prezzo, Prevendita, Totale, Resources.ticket.prezzo, Resources.ticket.prevendita, Resources.ticket.totale)
+            Return NumBiglietto.Substring(0, 15)
+        End Get
+    End Property
+    Public ReadOnly Property sezionePrezzo As String
+        Get
+            Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
+            Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
+            Return String.Format("{3}: {0} - {4}: {1} - {5}: {2}", Prezzo, Prevendita, Totale, HttpContext.GetGlobalResourceObject("ticket", "prezzo"), HttpContext.GetGlobalResourceObject("ticket", "prevendita"), HttpContext.GetGlobalResourceObject("ticket", "totale"))
         End Get
     End Property
     Public ReadOnly Property sezioneInfo As String

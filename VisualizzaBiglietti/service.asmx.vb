@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Globalization
 Imports System.Web.Services
 Imports System.Web.Services.Protocols
 
@@ -10,7 +11,7 @@ Imports System.Web.Services.Protocols
 Public Class service
     Inherits System.Web.Services.WebService
 
-    <WebMethod()>
+    <WebMethod(EnableSession:=True)>
     Public Function GetTickets(NumTel As String, IdMan As String) As TicketViewModel
         Dim model As New TicketViewModel With {
             .exception = False
@@ -49,26 +50,30 @@ Public Class service
         Return model
     End Function
 
-    <WebMethod()>
+    <WebMethod(EnableSession:=True)>
     Public Function AddRegistry(Nome As String, Cognome As String, NumBiglietto As String) As BaseViewModel
         Dim viewModel As New BaseViewModel With {
             .Exception = False
         }
         Try
+            Dim onlyCodBiglietto = NumBiglietto.Substring(0, 15)
+            Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
+            Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
+
             If String.IsNullOrEmpty(Nome) Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: inserire il nome", NumBiglietto, Resources.ticket.numBiglietto)
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "nomeObbligatorio"))
                 Return viewModel
             End If
             If String.IsNullOrEmpty(Cognome) Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: inserire il cognome", NumBiglietto, Resources.ticket.numBiglietto)
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "cognomeObbligatorio"))
                 Return viewModel
             End If
             Dim ws As New wsTicket.ServizioRemoto
             If ws.InserisciAnagrafica(Nome, Cognome, NumBiglietto) = False Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", NumBiglietto, Resources.ticket.numBiglietto, Resources.ticket.erroreAnagrafica)
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "erroreAnagrafica"))
             End If
         Catch ex As Exception
             viewModel.Exception = True

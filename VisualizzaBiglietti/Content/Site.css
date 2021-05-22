@@ -18,6 +18,29 @@ textarea {
     max-width: 100%;
 }
 
+.card {
+    margin-top: 5px !important;
+}
+
+.fixed-top {
+    position: initial !important;
+}
+
+.navbar-brand-centered {
+    position: absolute;
+    left: 50%;
+    display: block;
+    width: 160px;
+    text-align: center;
+    background-color: transparent;
+    margin-top: 50px;
+}
+
+.navbar > .container .navbar-brand-centered,
+.navbar > .container-fluid .navbar-brand-centered {
+    margin-left: -80px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .jumbotron {
@@ -26,4 +49,5 @@ textarea {
     .body-content {
         padding: 0;
     }
+
 }

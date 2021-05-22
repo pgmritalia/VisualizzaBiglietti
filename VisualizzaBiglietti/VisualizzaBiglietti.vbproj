@@ -186,6 +186,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\flag-icon.css" />
+    <Content Include="Content\flag\Italy-Flag.png" />
+    <Content Include="Content\flag\Italy-Flag16.png" />
+    <Content Include="Content\flag\United-Kingdom-Flag.png" />
+    <Content Include="Content\flag\United-Kingdom-Flag16.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Ticket.css" />
     <Content Include="Content\toastr.css" />
@@ -250,6 +255,11 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\ticket.en-EN.designer.vb">
+      <DependentUpon>ticket.en-EN.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="App_GlobalResources\ticket1.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -344,6 +354,10 @@
     <Content Include="App_GlobalResources\ticket.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ticket1.designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\ticket.en-EN.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ticket.en-EN.designer.vb</LastGenOutput>
     </Content>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
