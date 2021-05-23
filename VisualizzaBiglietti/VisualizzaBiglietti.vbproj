@@ -255,8 +255,8 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\ticket.en-EN.designer.vb">
-      <DependentUpon>ticket.en-EN.resx</DependentUpon>
+    <Compile Include="App_GlobalResources\ticket.en-US.designer.vb">
+      <DependentUpon>ticket.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
@@ -355,9 +355,9 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>ticket.designer.vb</LastGenOutput>
     </Content>
-    <Content Include="App_GlobalResources\ticket.en-EN.resx">
+    <Content Include="App_GlobalResources\ticket.en-US.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>ticket.en-EN.designer.vb</LastGenOutput>
+      <LastGenOutput>ticket.en-US.designer.vb</LastGenOutput>
     </Content>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
