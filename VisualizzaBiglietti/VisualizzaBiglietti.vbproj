@@ -261,7 +261,7 @@
       <DesignTime>True</DesignTime>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="App_GlobalResources\ticket1.designer.vb">
+    <Compile Include="App_GlobalResources\ticket.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ticket.resx</DependentUpon>
@@ -355,7 +355,7 @@
   <ItemGroup>
     <EmbeddedResource Include="App_GlobalResources\ticket.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ticket1.designer.vb</LastGenOutput>
+      <LastGenOutput>ticket.designer.vb</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="App_GlobalResources\ticket.en-US.resx">
