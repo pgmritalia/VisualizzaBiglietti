@@ -259,11 +259,13 @@
       <DependentUpon>ticket.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="App_GlobalResources\ticket.designer.vb">
+    <Compile Include="App_GlobalResources\ticket1.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ticket.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
@@ -351,14 +353,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\ticket.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>ticket.designer.vb</LastGenOutput>
-    </Content>
-    <Content Include="App_GlobalResources\ticket.en-US.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
+    <EmbeddedResource Include="App_GlobalResources\ticket.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ticket1.designer.vb</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\ticket.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ticket.en-US.designer.vb</LastGenOutput>
-    </Content>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
