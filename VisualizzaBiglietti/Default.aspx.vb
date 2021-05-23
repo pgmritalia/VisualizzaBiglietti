@@ -15,11 +15,11 @@ Public Class _Default
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
         'da decommentare in fase di test
-        paramTel.Value = Request.Item("NumTel")
-        paramIdMan.Value = Request.Item("IdMan")
+        'paramTel.Value = Request.Item("NumTel")
+        'paramIdMan.Value = Request.Item("IdMan")
 
-        '  paramTel.Value = "3288283546"
-        'paramIdMan.Value = "DA30"
+        paramTel.Value = "3288283546"
+        paramIdMan.Value = "DA30"
 
 
         If HttpContext.Current.Session("Lang") Is Nothing Then

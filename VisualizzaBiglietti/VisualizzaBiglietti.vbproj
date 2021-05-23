@@ -260,7 +260,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="App_GlobalResources\ticket1.designer.vb">
+    <Compile Include="App_GlobalResources\ticket.designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ticket.resx</DependentUpon>
@@ -353,7 +353,7 @@
   <ItemGroup>
     <Content Include="App_GlobalResources\ticket.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>ticket1.designer.vb</LastGenOutput>
+      <LastGenOutput>ticket.designer.vb</LastGenOutput>
     </Content>
     <Content Include="App_GlobalResources\ticket.en-EN.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
