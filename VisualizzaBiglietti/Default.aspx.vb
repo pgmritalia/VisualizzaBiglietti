@@ -15,11 +15,11 @@ Public Class _Default
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 
         'da decommentare in fase di test
-        paramTel.Value = Request.Item("NumTel")
-        paramIdMan.Value = Request.Item("IdMan")
+        '  paramTel.Value = Request.Item("NumTel")
+        ' paramIdMan.Value = Request.Item("IdMan")
 
-        'paramTel.Value = "3288283546"
-        'paramIdMan.Value = "CJ30"
+        paramTel.Value = "3288283546"
+        paramIdMan.Value = "HV30"
 
 
         If HttpContext.Current.Session("Lang") Is Nothing Then
@@ -28,13 +28,14 @@ Public Class _Default
 
         Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
         Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
-        paramLoading.Value = GetGlobalResourceObject("ticket", MyResources._default.loading)
+        paramLoading.Value = MyResources._default.loading
 
 
-        litBiglietto.Text = GetGlobalResourceObject("ticket", MyResources._default.numBiglietto)
-        litNome.Text = GetGlobalResourceObject("ticket", MyResources._default.nome)
-        litCognome.Text = GetGlobalResourceObject("ticket", MyResources._default.cognome)
-        litConferma.Text = GetGlobalResourceObject("ticket", MyResources._default.conferma)
-        litDisplay.Text = GetGlobalResourceObject("ticket", MyResources._default.compilacampi)
+
+        litBiglietto.Text = MyResources._default.numBiglietto
+        litNome.Text = MyResources._default.nome
+        litCognome.Text = MyResources._default.cognome
+        litConferma.Text = MyResources._default.conferma
+        litDisplay.Text = MyResources._default.compilacampi
     End Sub
 End Class
