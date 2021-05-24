@@ -6,7 +6,7 @@
             display: inline !important;
         }
 
-/*        img {
+        /*        img {
             margin-top: 17px !important;
             margin-left: 10px !important;
         }*/
@@ -15,12 +15,24 @@
             font-size: 1rem !important;
         }
 
+        .titolare {
+            font-size: 9pt !important;
+        }
+
+        .info {
+            font-size: 10pt !important;
+        }
+
+        .eventoposto {
+            font-size: 24pt !important;
+        }
+
         img {
             vertical-align: middle;
             border-style: none;
-             margin-top: 17px !important;
+            margin-top: 17px !important;
             margin-left: 15px !important;
-             width: 90%; 
+            width: 90%;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,36 +63,36 @@
                                         </div>
                                     </div>
                                     <div class="col-md-9 card-cont">
-                                        <small>{{item.CodBiglietto}}</small>
-                                        <h3>{{item.Titolare}}</h3>
-                                        <h3>{{item.Organizzatore}}</h3>
+                                        <small>{{item.CodBiglietto}}</small><br />
+                                        <span class="titolare">{{item.Titolare}}</span><br />
+                                        <span class="titolare">{{item.Organizzatore}}</span>
                                         <div class="even-info">
                                             <i class="fa fa-map-marker"></i>
-                                            <p style="font-size: 12pt">
+                                            <p class="eventoposto">
                                                 {{item.NomeEvento}}
                                             </p>
                                         </div>
                                         <div class="even-date">
                                             <i class="fa fa-calendar"></i>
-                                            <p style="font-size: 8pt">
+                                            <p class="titolare">
                                                 <span>{{item.DataEvento}}</span>
                                             </p>
                                         </div>
                                         <div class="even-info">
                                             <i class="fa fa-map-pin"></i>
-                                            <p>
+                                            <p class="eventoposto">
                                                 {{item.filaeposto}}
                                             </p>
                                         </div>
                                         <div class="even-info">
                                             <i class="fa fa-eur"></i>
-                                            <p>
+                                            <p class="info">
                                                 {{item.sezionePrezzo}}
                                             </p>
                                         </div>
                                         <div class="even-info">
                                             <i class="fa fa-info"></i>
-                                            <p>
+                                            <p class="info">
                                                 {{item.sezioneInfo}}
                                             </p>
                                         </div>
@@ -120,7 +132,7 @@
                                             <input type="text" id="name_{{$index}}" class="form-control">
                                         </div>
                                         <div class="col-6">
-                                            <asp:Literal ID="litCognome" runat="server" Text=" <%$ Resources:ticket,cognome %>"></asp:Literal>
+                                            <asp:Literal ID="litCognome" runat="server"></asp:Literal>
                                             <input type="text" id="surname_{{$index}}" class="form-control">
                                         </div>
                                     </div>
@@ -128,7 +140,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <a href="#" class="btn btn-success" data-ng-click="send(item.NumBiglietto,$index)">
-                                        <asp:Literal ID="litConferma" runat="server" Text=" <%$ Resources:ticket,conferma %>"></asp:Literal>
+                                        <asp:Literal ID="litConferma" runat="server"></asp:Literal>
 
                                     </a>
                                 </div>

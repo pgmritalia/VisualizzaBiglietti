@@ -28,11 +28,13 @@ Public Class _Default
 
         Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
         Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
-        paramLoading.Value = GetGlobalResourceObject("ticket", "loading")
-        litBiglietto.Text = GetGlobalResourceObject("ticket", "numBiglietto")
-        litNome.Text = GetGlobalResourceObject("ticket", "nome")
-        litCognome.Text = GetGlobalResourceObject("ticket", "cognome")
-        litConferma.Text = GetGlobalResourceObject("ticket", "conferma")
-        litDisplay.Text = GetGlobalResourceObject("ticket", "compilacampi")
+        paramLoading.Value = GetGlobalResourceObject("ticket", MyResources._default.loading)
+
+
+        litBiglietto.Text = GetGlobalResourceObject("ticket", MyResources._default.numBiglietto)
+        litNome.Text = GetGlobalResourceObject("ticket", MyResources._default.nome)
+        litCognome.Text = GetGlobalResourceObject("ticket", MyResources._default.cognome)
+        litConferma.Text = GetGlobalResourceObject("ticket", MyResources._default.conferma)
+        litDisplay.Text = GetGlobalResourceObject("ticket", MyResources._default.compilacampi)
     End Sub
 End Class

@@ -29,7 +29,8 @@ Public Class ItemTicketViewModel
         Get
             Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
             Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
-            Return String.Format("{3}: {0} - {4}: {1} - {5}: {2}", Prezzo, Prevendita, Totale, HttpContext.GetGlobalResourceObject("ticket", "prezzo"), HttpContext.GetGlobalResourceObject("ticket", "prevendita"), HttpContext.GetGlobalResourceObject("ticket", "totale"))
+
+            Return String.Format("{3}: {0} - {4}: {1} - {5}: {2}", Prezzo, Prevendita, Totale, MyResources._default.prezzo, MyResources._default.prevendita, MyResources._default.totale)
         End Get
     End Property
     Public ReadOnly Property sezioneInfo As String

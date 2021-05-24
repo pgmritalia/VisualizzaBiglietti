@@ -62,18 +62,18 @@ Public Class service
 
             If String.IsNullOrEmpty(Nome) Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "nomeObbligatorio"))
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, MyResources._default.numBiglietto, MyResources._default.nomeObbligatorio)
                 Return viewModel
             End If
             If String.IsNullOrEmpty(Cognome) Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "cognomeObbligatorio"))
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, MyResources._default.numBiglietto, MyResources._default.cognomeObbligatorio)
                 Return viewModel
             End If
             Dim ws As New wsTicket.ServizioRemoto
             If ws.InserisciAnagrafica(Nome, Cognome, NumBiglietto) = False Then
                 viewModel.Exception = True
-                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, HttpContext.GetGlobalResourceObject("ticket", "numBiglietto"), HttpContext.GetGlobalResourceObject("ticket", "erroreAnagrafica"))
+                viewModel.ExceptionMessage = String.Format("{1} {0}: {2}", onlyCodBiglietto, MyResources._default.numBiglietto, MyResources._default.erroreAnagrafica)
             End If
         Catch ex As Exception
             viewModel.Exception = True
