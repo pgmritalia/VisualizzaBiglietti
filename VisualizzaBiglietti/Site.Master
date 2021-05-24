@@ -46,8 +46,8 @@
                 <a class="navbar-brand" href="#" style="margin-left: 35%">
                    <img alt="Digital Ticket" src="mailticket_logo.png" style="width: 400px; margin-top: -7px;" />
                     
-                    <asp:ImageButton ID="flagIt" runat="server" ImageUrl="~/Content/flag/Italy-Flag.png" />
-                    <asp:ImageButton ID="flagUk" runat="server" ImageUrl="~/Content/flag/United-Kingdom-Flag.png" />
+                    <asp:ImageButton ID="flagIt" runat="server" ImageUrl="~/Content/flag/Italy-Flag_64.png" />
+                    <asp:ImageButton ID="flagUk" runat="server" ImageUrl="~/Content/flag/United-Kingdom-Flag64.png" />
                 </a>
             </nav>
             <div class="content-wrapper">

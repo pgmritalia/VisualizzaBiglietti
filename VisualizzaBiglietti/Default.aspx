@@ -32,6 +32,7 @@
             border-style: none;
             margin-top: 17px !important;
             margin-left: 15px !important;
+            margin-right: 15px !important;
             width: 90%;
         }
     </style>

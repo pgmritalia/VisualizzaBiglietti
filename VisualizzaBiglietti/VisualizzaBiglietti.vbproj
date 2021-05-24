@@ -189,8 +189,10 @@
     <Content Include="Content\flag-icon.css" />
     <Content Include="Content\flag\Italy-Flag.png" />
     <Content Include="Content\flag\Italy-Flag16.png" />
+    <Content Include="Content\flag\Italy-Flag_64.png" />
     <Content Include="Content\flag\United-Kingdom-Flag.png" />
     <Content Include="Content\flag\United-Kingdom-Flag16.png" />
+    <Content Include="Content\flag\United-Kingdom-Flag64.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Ticket.css" />
     <Content Include="Content\toastr.css" />
