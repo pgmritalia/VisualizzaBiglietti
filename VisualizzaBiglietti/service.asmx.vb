@@ -17,6 +17,8 @@ Public Class service
             .exception = False
         }
         Try
+            Threading.Thread.CurrentThread.CurrentUICulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
+            Threading.Thread.CurrentThread.CurrentCulture = New CultureInfo(HttpContext.Current.Session("Lang").ToString())
 
             Dim ws As New wsTicket.ServizioRemoto
             Dim list As wsTicket.Biglietto() = ws.RecuperaBiglietti(NumTel, IdMan)
@@ -36,7 +38,7 @@ Public Class service
                 row.SCMAC = item.SCMAC
                 row.Titolare = item.Titolare
                 row.Organizzatore = item.Organizzatore
-                row.DataEmissione = item.DataEmissione
+                row.DataEmissione = String.Format(" {0} {1}", MyResources._default.dataEmissione, item.DataEmissione)
                 row.Sistema = item.Sistema
                 row.TipoTitolo = item.TipoTitolo
                 row.DescTitolo = item.DescTitolo

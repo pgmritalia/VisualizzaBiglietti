@@ -101,6 +101,15 @@ Namespace MyResources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to Data emiss:.
+        '''</summary>
+        Public Shared ReadOnly Property dataEmissione() As String
+            Get
+                Return ResourceManager.GetString("dataEmissione", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Si è verificato un errore durante il salvataggio anagrafica.
         '''</summary>
         Public Shared ReadOnly Property erroreAnagrafica() As String

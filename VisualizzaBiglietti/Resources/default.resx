@@ -129,6 +129,9 @@
   <data name="conferma" xml:space="preserve">
     <value>Conferma</value>
   </data>
+  <data name="dataEmissione" xml:space="preserve">
+    <value>Data emiss:</value>
+  </data>
   <data name="erroreAnagrafica" xml:space="preserve">
     <value>Si è verificato un errore durante il salvataggio anagrafica</value>
   </data>

@@ -129,6 +129,9 @@
   <data name="conferma" xml:space="preserve">
     <value>Confirm</value>
   </data>
+  <data name="dataEmissione" xml:space="preserve">
+    <value>Date of issue:</value>
+  </data>
   <data name="erroreAnagrafica" xml:space="preserve">
     <value>An error occurred while saving the registry</value>
   </data>
