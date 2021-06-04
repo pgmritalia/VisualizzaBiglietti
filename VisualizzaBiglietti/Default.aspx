@@ -97,6 +97,12 @@
                                                 {{item.sezioneInfo}}
                                             </p>
                                         </div>
+                                          <div class="even-info">
+                                            <i class="fa fa-clock-o"></i>
+                                            <p class="info">
+                                                {{item.DataEmissione}}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
 

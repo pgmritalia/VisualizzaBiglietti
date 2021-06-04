@@ -18,7 +18,7 @@ Public Class _Default
         paramTel.Value = Request.Item("NumTel")
         paramIdMan.Value = Request.Item("IdMan")
 
-        'paramTel.Value = "3288283546"
+        ' paramTel.Value = "3288283546"
         ' paramIdMan.Value = "HV30"
 
 
